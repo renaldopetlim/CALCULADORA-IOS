@@ -4,7 +4,8 @@ const signs = document.querySelectorAll('.sign');
 const equals = document.querySelector('.equals');
 const clear = document.querySelector('.clear');
 const negative = document.querySelector('.negative');
-const percent = document.querySelector('.percent');
+const persent = document.querySelector('.persent');
+const comma = document.querySelector('.comma');
 
 let firstValue = "";
 let isFirstValue = false;
@@ -13,13 +14,13 @@ let isSecondValue = false;
 let sign = "";
 let resultValue = 0;
 
-for(let i = 0; i < numbers.length; i++){
+for(let i = 0; i < numbers.length; i++) {
     numbers[i].addEventListener('click', (e) => {
         let atr = e.target.getAttribute('value');
-        if(isFirstValue === false){
+        if(isFirstValue === false) {
             getFirstValue(atr);
         }
-        if(isSecondValue == false){
+        if(isSecondValue == false) {
             getSecondValue(atr);
         }
     })
@@ -90,7 +91,7 @@ negative.addEventListener('click', () =>{
     result.innerHTML = resultValue;
 })
 
-percent.addEventListener('click', () => {
+persent.addEventListener('click', () => {
     result.innerHTML = "";
     if(firstValue != ""){
         resultValue = firstValue / 100;
